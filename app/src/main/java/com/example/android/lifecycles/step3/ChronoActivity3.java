@@ -53,6 +53,8 @@ public class ChronoActivity3 extends AppCompatActivity {
             }
         };
 
-        //TODO: observe the ViewModel's elapsed time
+        //OK: observe the ViewModel's elapsed time
+        // Instead of modifying views directly from the ViewModel, you configure an activity or fragment to observe a data source, receiving the data when it changes. v
+        mLiveDataTimerViewModel.getElapsedTime().observe(this, elapsedTimeObserver);
     }
 }
